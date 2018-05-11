@@ -1,0 +1,144 @@
+body {
+    background-image: url(images/marauders.jpg);
+    font-family: 'Roboto Slab', serif;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@font-face{
+    font-family: "Harry P";
+    src: url(font/harryP.TTF);
+}
+
+h1 {
+    font-family: "Harry P", monospace;
+    font-size: 5em;
+    text-shadow: 3px 3px 4px rgba(150, 150, 150, 1);
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+
+#quizBod {
+  background-image: url(images/bricks2.jpg);
+  height: auto;
+  width: 80vw; 
+  border-radius: 50px; 
+  padding: 5%;
+  color:white;
+  text-align: center;
+  margin: 5vh auto;
+}
+
+button {
+    color:white;
+    background-color: black;
+    margin: 20px 15px;
+    animation: float 8s ease-in-out infinite;
+}
+
+
+button:hover{
+    background-color: white;
+    color:black;
+}
+
+#refresh {
+    animation:none;
+}
+
+.text{
+    display: inline-block;
+    background: rgba(24, 24, 22,0.5);
+    padding:5px 15px;
+    border-radius: 25px;
+}
+
+
+.hide{
+    display: none;
+}
+
+#icons{
+    margin-top: 5vh;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.icon {
+    width:40px;
+    color:white;
+}
+
+.round {
+    background: rgba(24, 24, 22,0.5);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+
+    animation: example 4s infinite, float 6s ease-in-out infinite;
+    
+	transform: translatey(0px);
+}
+
+.round:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes example {
+    0%   {background:rgb(109, 36, 36)}
+    25%  {background:rgba(24, 24, 104,0.8)}
+    50%  {background: rgb(21, 92, 21)}
+    75%  {background:rgb(133, 133, 21)}
+    100% {background:rgb(109, 36, 36)}
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+  @keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-15px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Berlin Coding Challenge Quiz</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="quizStyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
+</head>
+<body>
+	<audio id="hp" autoplay loop>
+		<source  src="audio/harry_potter.mp3">
+	</audio>
+	<audio id="hp-remix">
+		<source src="audio/harry_potter_remix.mp3">
+	</audio>
+
+
+	<div id="icons">
+
+		<div data-toggle="popover" title="Joke Time!" data-content=" Why was Harry Potter sent to the office? Because he was cursing in class!">
+			<div class="round" data-toggle="tooltip" data-placement="top" title="What are you doing here? you should be answering the questions">
+				<img class="icon" src="icons/deathly-hallows.svg" alt="hallows">
+			</div>
+		</div>
+		<div data-toggle="popover" title="Badum TSS!" data-content="What did the Joker say to Harry Potter? Why so Sirius?">
+			<div class="round" data-toggle="tooltip" data-placement="top" title="You know who's faster than a golden snitch? Your grandma answering these questions, go on, keep answering son">
+				<img class="icon" src="icons/golden-snitch.svg" alt="snitch">
+			</div>
+		</div>
+		<div data-toggle="popover" title="Joke Time!" data-content="I named my lizard ’Harry’ just so I can say ’You’re a lizard Harry!’">
+			<div class="round" data-toggle="tooltip" data-placement="top" title="You must be a muggle">
+				<img class="icon" src="icons/broom.svg" alt="broom">
+			</div>
+		</div>
+		<div data-toggle="popover" title="Are you bored?" data-content="Knock! Knock! Who’s there? You know. You know who? Exactly. AVADA KEDAVRA!">
+			<div class="round" data-toggle="tooltip" data-placement="top" title="AVADA KEDAVRA! You are dead now.">
+				<img class="icon" src="icons/elderwand.svg" alt="wand">
+			</div>
+		</div>
+		<div data-toggle="popover" title="You sexy thang" data-content=" Did you survive Avada Kedavra? Cause you’re drop dead gorgeous ;)">
+			<div class="round" data-toggle="tooltip" data-placement="top" title="You’ll end up in Hufflepuff if you keep distracting yourself">
+				<img class="icon" src="icons/hat.svg" alt="hat">
+			</div>
+		</div>
+	
+	</div>
+	
+
+  <div id="quizBod">
+	
+
+    <h1>Harry Potter Trivia</h1>
+	<h2 class="question text"></h2>
+	<br>
+    <button class="answer btn"></button>
+    <button class="answer btn"></button>
+    <button class="answer btn"></button>
+
+	<h3 class="finish text"></h3>
+	<br>
+
+    <div>
+	<!--WRONG ANSWER GIFS-->
+			<!-- dumbledore dissappointed-->
+    <iframe id="dumb-dissappointed" class="hide gif wrong" src="https://giphy.com/embed/720g7C1jz13wI" width="200" height="150" frameborder="0"></iframe>
+			<!--ron worried-->
+	<iframe id="ron-worry" class="hide gif wrong" src="https://giphy.com/embed/12nfFCZA0vyrSw" width="200" height="240" frameborder="0"></iframe>
+			<!--snape hitting ron-->
+	<iframe id="snape-slap" class="hide gif wrong" src="https://giphy.com/embed/AisOYaOZdrS1i" width="240" height="155" frameborder="0"></iframe>
+			<!--you liar HP-->
+	<iframe id="harry-liar" class="hide gif wrong" src="https://giphy.com/embed/CmqNynXoenYnm" width="240" height="100" frameborder="0"></iframe>
+			<!--rubbish-->
+	<iframe  id="twins-rubbish" class="hide gif wrong" src="https://giphy.com/embed/NoBXm9gmqzx96" width="240" height="120" frameborder="0"></iframe>
+
+
+	<!--RIGHT ANSWER GIFS-->
+			<!--guuurl dumbledore-->
+	<iframe id="right1" class="hide gif right" src="https://giphy.com/embed/oGD3yIWPUdbri" width="200" height="150" frameborder="0"></iframe>
+			<!--magonagall applauding-->
+    <iframe id="right2" class="hide gif right" src="https://giphy.com/embed/PXvCWUnmqVdks" width="240" height="165" frameborder="0"></iframe>
+			<!--every day I'm dumblin'-->
+	<iframe id="right3" class="hide gif right" src="https://giphy.com/embed/7xl0Ok77o5QVG" width="240" height="135" frameborder="0"></iframe>
+			<!--Hermionie good spell-->
+	<iframe id="right4" class="hide gif right" src="https://giphy.com/embed/OUwzqE4ZOk5Bm" width="240" height="115" frameborder="0"></iframe>
+			<!--wicked Ron-->
+	<iframe id="right5" class="hide gif right" src="https://giphy.com/embed/HFdZPf52z9x4s" width="240" height="107" frameborder="0"></iframe>
+      <!--snape being sexy-->
+	  <iframe id="right6" class="hide gif right" src="https://giphy.com/embed/bZyjDAmxTP5UA" width="240" height="95" frameborder="0"></iframe>
+	  <!--dumbledore approves-->
+	  <iframe id="right7" class="hide gif right" src="https://giphy.com/embed/AOrThUuuOoDCg" width="240" height="242" frameborder="0"></iframe>
+
+	<!--FINAL SCORE GIFS-->
+			<!--draco malfoy mudblood When score is 0-->
+	<iframe id="mudblood" class="hide gif fscore" src="https://giphy.com/embed/QxxrpAsm0xJS0" width="180" height="240" frameborder="0"></iframe>
+
+			<!--Ron srsly what? (use this when score is below 50% and above 0)-->
+	<iframe id="srslywhat" class="hide gif fscore" src="https://giphy.com/embed/hP8xenrzdIhqw" width="240" height="171" frameborder="0"></iframe>
+
+			<!--Snape applauding when score is below 100% and above 50%-->
+	<iframe id="snape" class="hide gif fscore" src="https://giphy.com/embed/TGLLaCKWwxUVq" width="240" height="153" frameborder="0"></iframe>
+
+			<!--Hagrid Yer a wizzard Harry when score is 100%-->
+	<iframe id="wizard" class="hide gif fscore" src="https://giphy.com/embed/Qg9Scw3SIq88" width="480" height="320" frameborder="0"></iframe>
+      
+      </div>
+    
+			<p class="text"><strong>Score</strong>: <span class="score"></span> </p>
+			<br>	
+			
+
+
+    <button id="refresh" class="btn" onclick="history.go(0)">Start Again</button>
+    
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+	$(function () {
+  		$('[data-toggle="popover"]').popover()
+});
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
