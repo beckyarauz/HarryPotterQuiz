@@ -21,27 +21,27 @@
 
 	<div id="icons">
 
-		<div data-toggle="popover" title="Joke Time!" data-content=" Why was Harry Potter sent to the office? Because he was cursing in class!">
+		<div data-toggle="popover" tabindex="0" data-trigger="focus" data-placement="bottom" title="Joke Time!" data-content=" Why was Harry Potter sent to the office? Because he was cursing in class!">
 			<div class="round" data-toggle="tooltip" data-placement="top" title="What are you doing here? you should be answering the questions">
 				<img class="icon" src="icons/deathly-hallows.svg" alt="hallows">
 			</div>
 		</div>
-		<div data-toggle="popover" title="Badum TSS!" data-content="What did the Joker say to Harry Potter? Why so Sirius?">
+		<div data-toggle="popover" tabindex="0" data-trigger="focus" data-placement="bottom" title="Badum TSS!" data-content="What did the Joker say to Harry Potter? Why so Sirius?">
 			<div class="round" data-toggle="tooltip" data-placement="top" title="You know who's faster than a golden snitch? Your grandma answering these questions, go on, keep answering son">
 				<img class="icon" src="icons/golden-snitch.svg" alt="snitch">
 			</div>
 		</div>
-		<div data-toggle="popover" title="Joke Time!" data-content="I named my lizard ’Harry’ just so I can say ’You’re a lizard Harry!’">
+		<div data-toggle="popover" tabindex="0" data-trigger="focus" data-placement="bottom" title="Joke Time!" data-content="I named my lizard ’Harry’ just so I can say ’You’re a lizard Harry!’">
 			<div class="round" data-toggle="tooltip" data-placement="top" title="You must be a muggle">
 				<img class="icon" src="icons/broom.svg" alt="broom">
 			</div>
 		</div>
-		<div data-toggle="popover" title="Are you bored?" data-content="Knock! Knock! Who’s there? You know. You know who? Exactly. AVADA KEDAVRA!">
+		<div data-toggle="popover" tabindex="0" data-trigger="focus" data-placement="bottom" title="Are you bored?" data-content="Knock! Knock! Who’s there? You know. You know who? Exactly. AVADA KEDAVRA!">
 			<div class="round" data-toggle="tooltip" data-placement="top" title="AVADA KEDAVRA! You are dead now.">
 				<img class="icon" src="icons/elderwand.svg" alt="wand">
 			</div>
 		</div>
-		<div data-toggle="popover" title="You sexy thang" data-content=" Did you survive Avada Kedavra? Cause you’re drop dead gorgeous ;)">
+		<div data-toggle="popover" tabindex="0" data-trigger="focus" data-placement="bottom" title="You sexy thang" data-content=" Did you survive Avada Kedavra? Cause you’re drop dead gorgeous ;)">
 			<div class="round" data-toggle="tooltip" data-placement="top" title="You’ll end up in Hufflepuff if you keep distracting yourself">
 				<img class="icon" src="icons/hat.svg" alt="hat">
 			</div>
@@ -128,6 +128,10 @@
 });
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip()
+});
+
+	$('.popover-dismiss').popover({
+  trigger: 'focus'
 });
 </script>
 
